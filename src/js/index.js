@@ -1,4 +1,5 @@
-let imagens = document.querySelectorAll('.carrossel img');
+const imagens = document.querySelectorAll('.carrossel img');
+const botoes = document.querySelectorAll('.botoes-carrossel button');
 let indice = 0;
 
 
@@ -6,6 +7,10 @@ setInterval(() => {
     imagens[indice].classList.remove('ativa');
     indice = (indice + 1) % imagens.length;
     imagens[indice].classList.add('ativa');
+    
+    botoes[indice].classList.remove('selecionado');
+    botoes[indice].classList.add('selecionado');
+   
 	
 }, 5000);
 
